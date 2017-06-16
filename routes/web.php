@@ -93,10 +93,6 @@ Route::get('/function_practice',function(){
 	//有2個偶數
 });
 
-// function getRemainder($num1,$num2){
-// 	$remainder = $num1 % $num2;
-// 	return '餘數是. $remainder;
-// };
 
 // Route::get('/function_homework',function(){
 // 	echo countOfDay();
