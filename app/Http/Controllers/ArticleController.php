@@ -11,7 +11,8 @@ class ArticleController extends Controller
     {
     	$articles = Article::get();
 		
-    	// 資料夾.檔名 
+    	// view指向 路徑--資料夾.檔名 
+    	// with 帶有參數
     	return view('article.index')->with([
     		'rows' => $articles
     	]);
@@ -24,5 +25,5 @@ class ArticleController extends Controller
     	return view('article.show')->with([
     		'article' => $article
     	]);
-    }
+    } 
 }
