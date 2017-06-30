@@ -25,5 +25,5 @@ class ArticleController extends Controller
     	return view('article.show')->with([
     		'article' => $article
     	]);
-    } 
+    }
 }
