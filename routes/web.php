@@ -21,7 +21,7 @@ Route::get('article', 'ArticleController@index');
 // 文章內容 
 Route::get('article/{id}', 'ArticleController@show');
 
-// 測試分支
-// sublimeText3有bug
 
 // Master 主線新增
+
+// 分支上傳
