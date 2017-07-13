@@ -22,3 +22,15 @@ Route::get('article', 'ArticleController@index');
 Route::get('article/{id}', 'ArticleController@show');
 
 // hotfix~~~~~
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// Hello world~~~
