@@ -20,17 +20,3 @@ Route::get('article', 'ArticleController@index');
 
 // 文章內容 
 Route::get('article/{id}', 'ArticleController@show');
-
-// hotfix~~~~~
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// Hello world~~~
