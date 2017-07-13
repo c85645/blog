@@ -17,7 +17,9 @@
             @foreach($rows as $article)
             <tr>
                 <td>{{ $article->id }}</td>
-                <td>{{ $article->title }}</td>
+                <td>
+                    <a href="/article/{{ $article->id }}">{{ $article->title }}</a>
+                </td>
                 <td>{{ $article->created_at }}</td>
             </tr>
             @endforeach
