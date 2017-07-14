@@ -7,6 +7,7 @@ use App\Article;
 
 class ArticleController extends Controller
 {
+    // 文章清單
     public function index()
     {
     	$articles = Article::get();
@@ -18,6 +19,7 @@ class ArticleController extends Controller
     	]);
     }
 
+    // 列出文章內容
     public function show($id)
     {
     	$article = Article::find($id);
@@ -25,5 +27,22 @@ class ArticleController extends Controller
     	return view('article.show')->with([
     		'article' => $article
     	]);
+    }
+
+    // 新增
+    public function create()
+    {
+        return view('article.create');
+    }
+
+    // 儲存
+    public function store()
+    {
+        Article::create([
+            'title' => request()->input('title'),
+            'description' => request('description')
+        ]);
+
+        return redirect()->to('/article');
     }
 }

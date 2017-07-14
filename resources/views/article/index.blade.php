@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title></title>
+    <title>文章列表</title>
 </head>
 
 <body>
@@ -11,7 +11,6 @@
         <thead>
             <th>編號</th>
             <th>標題</th>
-            <th>建立時間</th>
         </thead>
         <tbody>
             @foreach($rows as $article)
@@ -20,7 +19,6 @@
                 <td>
                     <a href="/article/{{ $article->id }}">{{ $article->title }}</a>
                 </td>
-                <td>{{ $article->created_at }}</td>
             </tr>
             @endforeach
         </tbody>

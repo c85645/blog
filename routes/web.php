@@ -18,5 +18,11 @@ Route::get('/', function () {
 // 文章列表
 Route::get('article', 'ArticleController@index');
 
+// 新增
+Route::get('article/create', 'ArticleController@create');
+
 // 文章內容 
 Route::get('article/{id}', 'ArticleController@show');
+
+// 儲存
+Route::post('article', 'ArticleController@store');
