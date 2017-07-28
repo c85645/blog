@@ -18,27 +18,29 @@ Route::get('/', function () {
 // 任務列表
 Route::get('task','HomeController@index');
 
-// // 文章列表
+// 對文章操作CRUD
+Route::resource('article', 'ArticleController');
+// 文章列表
 // Route::get('article', 'ArticleController@index');
 
-// // 新增
+// 新增
 // Route::get('article/create', 'ArticleController@create');
 
-// // 儲存
+// 儲存
 // Route::post('article', 'ArticleController@store');
 
-// // 更新標單
+// 更新標單
 // Route::get('article/{article}/edit','ArticleController@edit');
 
-// // 更新的Action
+// 更新的Action
 // Route::put('article/{article}', 'ArticleController@update');
 
-// // 刪除
+// 刪除
 // Route::delete('article/{article}', 'ArticleController@destroy');
 
-// // 文章內容 
+// 文章內容 
 // Route::get('article/{article}', 'ArticleController@show');
-// 
-Route::resource('article', 'ArticleController');
+
+
 
 

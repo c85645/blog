@@ -11,7 +11,7 @@
 		<input type="text" name="title" value="{{ $article->title }}"><br>
 		<h3>內文</h3>
 		<textarea name="description" rows="5">{{ $article->description }}</textarea><br>
-		<input type="submit" value="儲存">
+		<input class="btn btn-primary" type="submit" value="儲存">
 	</form>
 @endsection
 

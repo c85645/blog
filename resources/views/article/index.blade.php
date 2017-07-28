@@ -1,13 +1,14 @@
 @extends('layout')
 
 @section('html')
+<div class="container">
   <h1>文章列表</h1>
-  <a href="/article/create">新增</a>
-  <table>
+  <a class="btn btn-primary" href="/article/create" role="button">新增</a>
+  <table class="table table-bordered">
     <thead>
-      <th>編號</th>
-      <th>標題</th>
-      <th>操作</th>
+      <th width="20%">編號</th>
+      <th width="30%">標題</th>
+      <th width="50%">操作</th>
     </thead>
     <tbody>
       @foreach($rows as $article)
@@ -17,17 +18,18 @@
           <a href="/article/{{ $article->id }}">{{ $article->title }}</a>
         </td>
         <td>
-          <a href="/article/{{ $article->id }}/edit">修改</a>
-          <form method="post" action="/article/{{ $article->id }}">
+          <form class="form-inline" method="post" action="/article/{{ $article->id }}">
+            <a class="btn btn-default" href="/article/{{ $article->id }}/edit">修改</a>
             <input type="hidden" name="_method" value="delete">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="submit" name="" value="刪除">
+            <input class="btn btn-danger" type="submit" name="" value="刪除">
           </form>
         </td>
       </tr>
       @endforeach
     </tbody>
   </table>
+</div>
 @endsection
 
 {{-- <!DOCTYPE html>
