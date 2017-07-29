@@ -1,25 +1,33 @@
-<!DOCTYPE html>
-<html>
+@extends('layout')
 
-<head>
-    <title>任務列表</title>
-</head>
-
-<body>
-    <h1>任務列表</h1>
-    <table>
-        <tbody>
-            @foreach($rows as $tasks)
-            <tr>
-                <td>{{ $tasks->id }}</td>
-                <td>
-                    {{-- <a href="/task/{{ $article->id }}">{{ $task->title }}</a> --}}
-                    {{ $tasks->name}}
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
-</body>
-
-</html>
+@section('html')
+<div class="container">
+  <h1>工作列表</h1>
+  <a class="btn btn-primary" href="/task/create" role="button">新增</a>
+  <table class="table table-bordered">
+    <thead>
+      <th width="20%">編號</th>
+      <th width="30%">標題</th>
+      <th width="50%">操作</th>
+    </thead>
+    <tbody>
+      @foreach($rows as $task)
+      <tr>
+        <td>{{ $task->id }}</td>
+        <td>
+          <a href="/task/{{ $task->id }}">{{ $task->name }}</a>
+        </td>
+        <td>
+          <form class="form-inline" method="post" action="/task/{{ $task->id }}">
+            <a class="btn btn-default" href="/task/{{ $task->id }}/edit">修改</a>
+            <input type="hidden" name="_method" value="delete">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input class="btn btn-danger" type="submit" name="" value="刪除">
+          </form>
+        </td>
+      </tr>
+      @endforeach
+    </tbody>
+  </table>
+</div>
+@endsection

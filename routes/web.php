@@ -15,11 +15,12 @@ Route::get('/', function () {
 	return view('/index');
 });
 
-// 任務列表
-Route::get('task','HomeController@index');
+// 對任務操作CRUD
+Route::resource('task','TaskController');
 
 // 對文章操作CRUD
 Route::resource('article', 'ArticleController');
+
 // 文章列表
 // Route::get('article', 'ArticleController@index');
 
