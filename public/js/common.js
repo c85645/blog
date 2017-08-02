@@ -20,7 +20,8 @@ function calRocIntervalDays(sDate,eDate){
 
     var interval = endDate.getTime() - begDate.getTime();
     var days = Math.floor(interval / msecPerDay);
-	return days;
+
+    return days;
 }
 
 /**
@@ -45,5 +46,6 @@ function calCEIntervalDays(sDate,eDate){
 
     var interval = endDate.getTime() - begDate.getTime();
     var days = Math.floor(interval / msecPerDay);
-        return days;
+    
+    return days;
 }
