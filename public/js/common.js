@@ -49,3 +49,23 @@ function calCEIntervalDays(sDate,eDate){
     
     return days;
 }
+
+/**
+ * 向左補零
+ * Ex:leftPad(3,3,'0')->003
+ * @param  val    [原值]
+ * @param  padLen [補足長度]
+ * @param  padVal [補足值]
+ * @return        [description]
+ */
+function leftPad(val, padLen, padVal) {
+    if (val.toString().length < padLen) {
+        for (var i = 1; i < padLen; i++) {
+            val = padVal + val;
+            if(val.toString().length >= padLen){
+                break;
+            }
+        }
+    }
+    return val;
+}
