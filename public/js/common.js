@@ -12,6 +12,9 @@ function calRocIntervalDays(sDate,eDate){
     var msecPerHour = msecPerMinute * 60;
     var msecPerDay = msecPerHour * 24;
 
+    sDate = leftPad(sDate,7,'0');
+    eDate = leftPad(eDate,7,'0');
+
     var begDateStr = "" + sDate.substring(3,5) + "/" + sDate.substring(5) + "/" + (Number(sDate.substring(0,3)) + Number(1911));
     var endDateStr = "" + eDate.substring(3,5) + "/" + eDate.substring(5) + "/" + (Number(eDate.substring(0,3)) + Number(1911));
 
