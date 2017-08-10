@@ -3,8 +3,9 @@
 @section('html')
 <div class="container">
   <h1>文章列表</h1>
-  <a class="btn btn-primary" href="/article/create" role="button">新增</a>
-  <table class="table table-bordered">
+  <a class="btn btn-primary" href="/article/create" role="button"><i class="fa fa-plus"> </i>新增</a>
+  <a class="btn btn-default" href="/" role="button"><i class="fa fa-home"></i>回上頁</a>
+  <table class="table table-bordered table-hover">
     <thead>
       <th width="20%">編號</th>
       <th width="30%">標題</th>
@@ -19,10 +20,11 @@
         </td>
         <td>
           <form class="form-inline" method="post" action="/article/{{ $article->id }}">
-            <a class="btn btn-default" href="/article/{{ $article->id }}/edit">修改</a>
+            <a class="btn btn-success" href="/article/{{ $article->id }}/edit"><i class="fa fa-pencil"></i>修改</a>
             <input type="hidden" name="_method" value="delete">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input class="btn btn-danger" type="submit" name="" value="刪除">
+            {{-- <input class="btn btn-danger" type="submit" name="" value="刪除"> --}}
+            <button class="btn btn-danger" type="submit" name=""><i class="fa fa-trash"> </i>刪除</button>
           </form>
         </td>
       </tr>
