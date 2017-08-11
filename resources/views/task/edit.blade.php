@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('html')
+<div class="container">
 	<h1>工作列表</h1>
 	<form method="post" action="/task/{{$task->id}}">
 		{{ method_field('put') }}
@@ -11,4 +12,5 @@
 		<textarea name="description" rows="5">{{ $task->description }}</textarea><br>
 		<input class="btn btn-primary" type="submit" value="儲存">
 	</form>
+</div>
 @endsection
