@@ -8,9 +8,7 @@
  * @return 天數
  */
 function calRocIntervalDays(sDate,eDate){
-    var msecPerMinute = 1000 * 60;
-    var msecPerHour = msecPerMinute * 60;
-    var msecPerDay = msecPerHour * 24;
+    var msecPerDay = 1000 * 60 * 60 * 24;
 
     sDate = leftPad(sDate,7,'0');
     eDate = leftPad(eDate,7,'0');
@@ -21,8 +19,8 @@ function calRocIntervalDays(sDate,eDate){
     var begDate = new Date(begDateStr);
     var endDate = new Date(endDateStr);
 
-    var interval = endDate.getTime() - begDate.getTime();
-    var days = Math.floor(interval / msecPerDay);
+    var daysBetween = endDate.getTime() - begDate.getTime();
+    var days = Math.floor(daysBetween / msecPerDay);
 
     return days;
 }
@@ -37,9 +35,7 @@ function calRocIntervalDays(sDate,eDate){
  * @return 天數
  */
 function calCEIntervalDays(sDate,eDate){
-    var msecPerMinute = 1000 * 60;
-    var msecPerHour = msecPerMinute * 60;
-    var msecPerDay = msecPerHour * 24;
+    var msecPerDay = 1000 * 60 * 60 * 24;
 
     var begDateStr = "" + sDate.substring(4,6) + "/" + sDate.substring(6) + "/" + sDate.substring(0,4);
     var endDateStr = "" + eDate.substring(4,6) + "/" + eDate.substring(6) + "/" + eDate.substring(0,4);
@@ -47,8 +43,8 @@ function calCEIntervalDays(sDate,eDate){
     var begDate = new Date(begDateStr);
     var endDate = new Date(endDateStr);
 
-    var interval = endDate.getTime() - begDate.getTime();
-    var days = Math.floor(interval / msecPerDay);
+    var daysBetween = endDate.getTime() - begDate.getTime();
+    var days = Math.floor(daysBetween / msecPerDay);
     
     return days;
 }
