@@ -25,18 +25,19 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class=""><a href="/task">家事管理 <span class="sr-only">(current)</span></a></li>
-          <li class=""><a href="/article">文章管理</a></li>
+          <li><a href="/task">家事管理 <span class="sr-only">(current)</span></a></li>
+          <li><a href="/article">文章管理</a></li>
+          <li><a href="/category">分類管理</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-circle" src="https://avatars0.githubusercontent.com/u/16713415?v=4&s=460" style="height: 20px"> Jeff <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><a href="#">第一個選單</a></li>
+              <li><a href="#">第二個選單</a></li>
+              <li><a href="#">第三個選單</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a href="#">分隔連結</a></li>
             </ul>
           </li>
         </ul>
