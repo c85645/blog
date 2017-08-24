@@ -44,7 +44,3 @@ Route::resource('category', 'CategoryController');
 
 // 文章內容 
 // Route::get('article/{article}', 'ArticleController@show');
-
-
-
-
