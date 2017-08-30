@@ -15,3 +15,12 @@ Route::get('/', function () {
     // return view('welcome');
     return view('/index');
 });
+
+// 對任務操作CRUD
+Route::resource('task','TaskController');
+
+// 對文章操作CRUD
+Route::resource('article', 'ArticleController');
+
+// 分類操作CRUD
+Route::resource('category', 'CategoryController');
