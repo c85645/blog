@@ -3,9 +3,22 @@
 @section('html')
 <div class="container">
   <h1 class="page-header">家事列表</h1>
-  <a class="btn btn-primary" href="/task/create" role="button"><i class="fa fa-plus"></i>新增</a>
-  <a class="btn btn-default" href="/" role="button"><i class="fa fa-home"></i>回上頁</a>
-  <table class="table table-bordered table-hover">
+  <div class="row">
+    <div class="col-xs-4">
+      <a class="btn btn-primary" href="/task/create" role="button"><i class="fa fa-plus"></i>新增</a>
+      <a class="btn btn-default" href="/" role="button"><i class="fa fa-home"></i>回上頁</a>
+    </div>
+    <div class="col-xs-offset-4 col-xs-4">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-bordered table-hover table-middle">
     <thead>
       <th width="20%">編號</th>
       <th width="30%">標題</th>
