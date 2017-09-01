@@ -2,10 +2,11 @@
 
 @section('html')
 <div class="container">
-	<h1>分類</h1>
-	<h4>{{ $category->id }}</h1>
-	<p>{{ $category->categoryName }}</p>
-	<small>{{ $category->created_at }}</small>
-	<small>{{ $category->created_at }}</small>
+	<div class="row">
+		<div class="col-xs-offset-4 col-xs-4"><h1>分類詳細內容</h1></div>
+		<div class="col-xs-offset-4 col-xs-4"><h4>{{ $category->id }}</h1></div>
+		<div class="col-xs-offset-4 col-xs-4"><p>{{ $category->categoryName }}</p></div>
+		<div class="col-xs-offset-4 col-xs-4"><small>{{ $category->created_at }}</small></div>
+	</div>
 </div>
 @endsection

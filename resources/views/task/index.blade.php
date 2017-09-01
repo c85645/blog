@@ -9,12 +9,12 @@
       <a class="btn btn-default" href="/" role="button"><i class="fa fa-home"></i>回上頁</a>
     </div>
     <div class="col-xs-offset-4 col-xs-4">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for...">
+      <form class="input-group" method="GET" action="/task">
+        <input name="keyword" type="text" class="form-control" placeholder="請輸入家事名稱..." value="{{ $keyword }}">
         <span class="input-group-btn">
-          <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+          <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
         </span>
-      </div>
+      </form>
     </div>
   </div>
 
