@@ -42,8 +42,13 @@ class ArticleController extends Controller
     // 儲存
     public function store()
     {
+        // 原本寫法，指定欄位並接收
+        // Article::create([
+        //     'title' => request()->input('title'),
+        //     'description' => request()->input('description')
+        // ]);
+        // 接收表單所有的資料，並在article table 新增一筆資料
         Article::create(request()->input());
-
         return redirect()->to('/article');
     }
 
