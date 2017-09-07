@@ -10,11 +10,11 @@ class ArticleController extends Controller
     // 文章清單
     public function index()
     {
-    	// view指向 路徑--資料夾.檔名 
-    	// with 帶有參數
-    	return view('article.index')->with([
-    		'rows' => Article::get()
-    	]);
+        // view指向 路徑--資料夾.檔名
+        // with 帶有參數
+        return view('article.index')->with([
+            'rows' => Article::get()
+        ]);
     }
 
     // // 列出文章內容
@@ -86,7 +86,7 @@ class ArticleController extends Controller
         // Article::destroy($id);
 
         $article->delete();
-        
+
         return redirect()->to('/article');
     }
 }

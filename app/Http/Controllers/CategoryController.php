@@ -14,9 +14,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-    	return view('category.index')->with([
-    		'rows' => Category::get()
-		]);
+        return view('category.index')->with([
+            'rows' => Category::get()
+        ]);
     }
 
     /**
@@ -26,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-    	return view('category.create');
+        return view('category.create');
     }
 
     /**
@@ -36,8 +36,8 @@ class CategoryController extends Controller
      */
     public function store()
     {
-    	Category::create(request()->input());
-    	return redirect()->to('/category');
+        Category::create(request()->input());
+        return redirect()->to('/category');
     }
 
     /**
@@ -48,9 +48,9 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-    	return view('category.show')->with([
-			'category' => $category
-		]);
+        return view('category.show')->with([
+            'category' => $category
+        ]);
     }
 
     /**
