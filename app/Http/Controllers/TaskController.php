@@ -9,11 +9,7 @@ class TaskController extends Controller
 {
     public function index()
     {
-        // return view('task.index')->with([
-        //  'rows' => Task::get()
-        // ]);
-
-        // 2017.09.01 Update
+        // 2017.09.01 Update 查詢功能，若有輸入keyword的話就搜尋keyword，若沒有輸入則顯示全部
         $keyword = request()->input('keyword');
 
         if ($keyword == '') {

@@ -3,6 +3,8 @@ test :
 
 init :
 		composer install
+		php artisan migrate
+		php artisan db:seed
 
 serve :
 		php artisan serve --port=8080

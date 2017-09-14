@@ -39,6 +39,7 @@
           <li><a href="/category">分類管理</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <li><a href="/login">登入</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-circle" src="https://avatars0.githubusercontent.com/u/16713415?v=4&s=460" style="height: 20px"> Jeff <span class="caret"></span></a>
             <ul class="dropdown-menu">
