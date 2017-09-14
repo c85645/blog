@@ -5,8 +5,10 @@ init :
 		cp .env.example .env
 		composer install
 		php artisan key:generate
-		php artisan migrate
-		php artisan db:seed
+		make initdb
 
 serve :
 		php artisan serve --port=8080
+
+initdb :
+		php artisan migrate:refresh --seed
