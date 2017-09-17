@@ -2,11 +2,7 @@
 
 @section('html')
 <div class="container">
-    <h1>字體不同style</h1>
-    <h2>字體不同style</h2>
-    <h3>字體不同style</h3>
-    <h4>字體不同style</h4>
-    <h5>字體不同style</h5>
-    <h6>字體不同style</h6>
+  <h1>Welcome to Stream's Laravel Workshop!</h1>
+  <h4>This is Jeff's Laravel practice project.</h4>
 </div>
 @endsection
