@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout.master')
 
 @section('html')
 <div class="container">
@@ -36,7 +36,7 @@
             <a class="btn btn-success" href="/category/{{ $category->id }}/edit"><i class="fa fa-pencil"></i>修改</a>
             <input type="hidden" name="_method" value="delete">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <button class="btn btn-danger" type="submit" name=""><i class="fa fa-trash"> </i>刪除</button> 
+            <button class="btn btn-danger" type="submit" name=""><i class="fa fa-trash"> </i>刪除</button>
           </form>
         </td>
       </tr>
