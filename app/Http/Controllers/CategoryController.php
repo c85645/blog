@@ -14,8 +14,16 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        $keyword = request() -> input('keyword');
+
+        if($keyword == ''){
+            $category = Category::get();
+        } else {
+            $category = Category::where('categoryName','like','%'.request()->input('keyword').'%')->get();
+        }
         return view('category.index')->with([
-            'rows' => Category::get()
+            'rows' => $category,
+            'keyword' => $keyword
         ]);
     }
 

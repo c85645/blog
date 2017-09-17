@@ -12,8 +12,17 @@ class ArticleController extends Controller
     {
         // view指向 路徑--資料夾.檔名
         // with 帶有參數
+        $keyword = request() -> input('keyword');
+
+        if($keyword == '') {
+            $article = Article::get();
+        } else {
+            $article = Article::where('title', 'like', '%'.request()->input('keyword').'%')->get();
+        }
+
         return view('article.index')->with([
-            'rows' => Article::get()
+            'rows' => $article,
+            'keyword' => $keyword
         ]);
     }
 
