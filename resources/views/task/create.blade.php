@@ -15,7 +15,10 @@
 					<h3>工作內容</h3>
 					<textarea name="description" rows="5" class="form-control"></textarea><br>
 				</div>
-				<input class="btn btn-primary" type="submit" value="儲存">
+				<div class="form-group">
+					<input class="btn btn-primary" type="submit" value="儲存">
+				</div>
+				@include('layout.errors')
 			</form>
 		</div>
 	</div>
