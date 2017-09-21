@@ -10,11 +10,11 @@
 				{{ csrf_field() }}
 				<div class="form-group">
 					<h3>標題</h3>
-					<input type="text" name="title" value="{{ $article->title }}" class="form-control"><br>
+					<input type="text" name="title" value="{{ old('title',$article->title) }}" class="form-control"><br>
 				</div>
 				<div class="form-group">
 					<h3>內文</h3>
-					<textarea name="description" rows="5" class="form-control">{{ $article->description }}</textarea><br>
+					<textarea name="description" rows="5" class="form-control">{{ old('description',$article->description) }}</textarea><br>
 				</div>
 				<div class="form-group">
 					<input class="btn btn-primary" type="submit" value="儲存">

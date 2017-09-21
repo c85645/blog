@@ -13,7 +13,7 @@
 				</div>
 				<div class="form-group">
 					<h3>內文</h3>
-					<textarea name="description" rows="5" class="form-control">{{ old('description') }}</textarea><br>
+					<textarea name="description" rows="5" class="form-control">{{ old('description') }}</textarea>
 				</div>
 				<input class="btn btn-primary" type="submit" value="儲存">
 				@include('layout.errors')

@@ -13,7 +13,7 @@
 				</div>
 				<div class="form-group">
 					<h3>工作內容</h3>
-					<textarea name="description" rows="5" class="form-control">{{ old('description') }}</textarea><br>
+					<textarea name="description" rows="5" class="form-control">{{ old('description') }}</textarea>
 				</div>
 				<div class="form-group">
 					<input class="btn btn-primary" type="submit" value="儲存">
