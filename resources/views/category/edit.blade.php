@@ -8,11 +8,18 @@
 			<form method="post" action="/category/{{$category->id}}">
 				{{ method_field('put') }}
 				{{ csrf_field() }}
-				<h3>分類ID</h3>
-				<input type="text" name="id" value="{{ $category->id }}" class="form-control"><br>
-				<h3>分類名稱</h3>
-				<textarea name="categoryName" rows="5" class="form-control">{{ $category->categoryName }}</textarea><br>
-				<input class="btn btn-primary" type="submit" value="儲存">
+				<div class="form-group">
+					<h3>分類ID</h3>
+					<input type="text" name="id" value="{{ $category->id }}" class="form-control"><br>
+				</div>
+				<div class="form-group">
+					<h3>分類名稱</h3>
+					<textarea name="categoryName" rows="5" class="form-control">{{ $category->categoryName }}</textarea><br>
+				</div>
+				<div class="form-group">
+					<input class="btn btn-primary" type="submit" value="儲存">
+				</div>
+				@include('layout.errors')
 			</form>
 		</div>
 	</div>

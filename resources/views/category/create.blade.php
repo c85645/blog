@@ -9,9 +9,10 @@
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				<div class="form-group">
 					<h3>分類名稱</h3>
-					<textarea name="categoryName" rows="5" class="form-control"></textarea><br>
+					<textarea name="categoryName" rows="5" class="form-control">{{ old('categoryName') }}</textarea><br>
 				</div>
 				<input class="btn btn-primary" type="submit" value="儲存">
+				@include('layout.errors')
 			</form>
 		</div>
 	</div>

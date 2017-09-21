@@ -9,13 +9,14 @@
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				<div class="form-group">
 					<h3>標題</h3>
-					<input type="text" name="title" class="form-control"><br>
+					<input type="text" name="title" class="form-control" value="{{ old('title') }}"><br>
 				</div>
 				<div class="form-group">
 					<h3>內文</h3>
-					<textarea name="description" rows="5" class="form-control"></textarea><br>
+					<textarea name="description" rows="5" class="form-control">{{ old('description') }}</textarea><br>
 				</div>
 				<input class="btn btn-primary" type="submit" value="儲存">
+				@include('layout.errors')
 			</form>
 		</div>
 	</div>

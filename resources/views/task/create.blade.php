@@ -9,11 +9,11 @@
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				<div class="form-group">
 					<h3>工作名稱</h3>
-					<input type="text" name="name" class="form-control"><br>
+					<input type="text" name="name" class="form-control" value="{{ old('name') }}"><br>
 				</div>
 				<div class="form-group">
 					<h3>工作內容</h3>
-					<textarea name="description" rows="5" class="form-control"></textarea><br>
+					<textarea name="description" rows="5" class="form-control">{{ old('description') }}</textarea><br>
 				</div>
 				<div class="form-group">
 					<input class="btn btn-primary" type="submit" value="儲存">

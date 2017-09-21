@@ -2,7 +2,7 @@
 
 @section('html')
 <div class="container">
-  <h1 class="page-header">家事列表</h1>
+  <h1 class="page-header">工作列表</h1>
   <div class="row">
     <div class="col-xs-4">
       <a class="btn btn-primary" href="/task/create" role="button"><i class="fa fa-plus"></i>新增</a>

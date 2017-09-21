@@ -55,6 +55,11 @@ class TaskController extends Controller
 
     public function update(Task $task)
     {
+        $this -> validate(request(),[
+            'name' => 'required',
+            'description' => 'required'
+        ]);
+
         $task->update(request()->input());
         return redirect()->to('/task');
     }

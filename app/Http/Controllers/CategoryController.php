@@ -44,6 +44,10 @@ class CategoryController extends Controller
      */
     public function store()
     {
+        $this -> validate(request(),[
+            'categoryName' => 'required'
+        ]);
+
         Category::create(request()->input());
         return redirect()->to('/category');
     }
@@ -81,6 +85,10 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
+        $this -> validate(request(),[
+            'categoryName' => 'required'
+        ]);
+
         $category->update(request()->input());
         return redirect()->to('/category');
     }

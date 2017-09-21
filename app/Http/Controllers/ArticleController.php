@@ -57,6 +57,11 @@ class ArticleController extends Controller
         //     'description' => request()->input('description')
         // ]);
         // 接收表單所有的資料，並在article table 新增一筆資料
+
+        $this -> validate(request(),[
+            'title' => 'required',
+            'description' => 'required'
+        ]);
         Article::create(request()->input());
         return redirect()->to('/article');
     }
@@ -80,9 +85,12 @@ class ArticleController extends Controller
         //     'title' => request()->input('title'),
         //     'description' => request('description')
         // ]);
+        $this -> validate(request(),[
+            'title' => 'required',
+            'description' => 'required'
+        ]);
 
         $article->update(request()->input());
-
         return redirect()->to('/article');
     }
 

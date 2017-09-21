@@ -8,11 +8,18 @@
 			<form method="post" action="/article/{{$article->id}}">
 				{{ method_field('put') }}
 				{{ csrf_field() }}
-				<h3>標題</h3>
-				<input type="text" name="title" value="{{ $article->title }}" class="form-control"><br>
-				<h3>內文</h3>
-				<textarea name="description" rows="5" class="form-control">{{ $article->description }}</textarea><br>
-				<input class="btn btn-primary" type="submit" value="儲存">
+				<div class="form-group">
+					<h3>標題</h3>
+					<input type="text" name="title" value="{{ $article->title }}" class="form-control"><br>
+				</div>
+				<div class="form-group">
+					<h3>內文</h3>
+					<textarea name="description" rows="5" class="form-control">{{ $article->description }}</textarea><br>
+				</div>
+				<div class="form-group">
+					<input class="btn btn-primary" type="submit" value="儲存">
+				</div>
+				@include('layout.errors')
 			</form>
 		</div>
 	</div>

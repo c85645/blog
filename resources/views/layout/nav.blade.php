@@ -14,7 +14,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/task">家事管理 <span class="sr-only">(current)</span></a></li>
+        <li><a href="/task">工作管理 <span class="sr-only">(current)</span></a></li>
         <li><a href="/article">文章管理</a></li>
         <li><a href="/category">分類管理</a></li>
       </ul>
