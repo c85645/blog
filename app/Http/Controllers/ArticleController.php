@@ -14,7 +14,7 @@ class ArticleController extends Controller
         // with 帶有參數
         $keyword = request() -> input('keyword');
 
-        if($keyword == '') {
+        if ($keyword == '') {
             $article = Article::get();
         } else {
             $article = Article::where('title', 'like', '%'.request()->input('keyword').'%')->get();
@@ -58,7 +58,7 @@ class ArticleController extends Controller
         // ]);
         // 接收表單所有的資料，並在article table 新增一筆資料
 
-        $this -> validate(request(),[
+        $this -> validate(request(), [
             'title' => 'required',
             'description' => 'required'
         ]);
@@ -85,7 +85,7 @@ class ArticleController extends Controller
         //     'title' => request()->input('title'),
         //     'description' => request('description')
         // ]);
-        $this -> validate(request(),[
+        $this -> validate(request(), [
             'title' => 'required',
             'description' => 'required'
         ]);

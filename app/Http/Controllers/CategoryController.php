@@ -16,10 +16,10 @@ class CategoryController extends Controller
     {
         $keyword = request() -> input('keyword');
 
-        if($keyword == ''){
+        if ($keyword == '') {
             $category = Category::get();
         } else {
-            $category = Category::where('categoryName','like','%'.request()->input('keyword').'%')->get();
+            $category = Category::where('categoryName', 'like', '%'.request()->input('keyword').'%')->get();
         }
         return view('category.index')->with([
             'rows' => $category,
@@ -44,7 +44,7 @@ class CategoryController extends Controller
      */
     public function store()
     {
-        $this -> validate(request(),[
+        $this -> validate(request(), [
             'categoryName' => 'required'
         ]);
 
@@ -85,7 +85,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        $this -> validate(request(),[
+        $this -> validate(request(), [
             'categoryName' => 'required'
         ]);
 

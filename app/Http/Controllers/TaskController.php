@@ -39,7 +39,7 @@ class TaskController extends Controller
 
     public function store()
     {
-        $this -> validate(request(),[
+        $this -> validate(request(), [
             'name' => 'required',
             'description' => 'required'
         ]);
@@ -55,7 +55,7 @@ class TaskController extends Controller
 
     public function update(Task $task)
     {
-        $this -> validate(request(),[
+        $this -> validate(request(), [
             'name' => 'required',
             'description' => 'required'
         ]);
