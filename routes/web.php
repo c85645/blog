@@ -24,3 +24,12 @@ Route::resource('article', 'ArticleController');
 
 // 分類操作CRUD
 Route::resource('category', 'CategoryController');
+
+// 登入頁GET Request
+Route::get('login', 'LoginController@showLoginForm');
+
+// 登入認證
+Route::post('login', 'LoginController@authenticate');
+
+// 登出
+Route::post('login'. 'LoginController@logout');
