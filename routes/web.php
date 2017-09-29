@@ -16,17 +16,20 @@ Route::get('/', function () {
     return view('/index');
 });
 
-// 對任務操作CRUD
-Route::resource('task','TaskController');
+Route::group(['middleware' => 'auth'], function () {
+    // 對任務操作CRUD
+    Route::resource('task', 'TaskController');
 
-// 對文章操作CRUD
-Route::resource('article', 'ArticleController');
+    // 對文章操作CRUD
+    Route::resource('article', 'ArticleController');
 
-// 分類操作CRUD
-Route::resource('category', 'CategoryController');
+    // 分類操作CRUD
+    Route::resource('category', 'CategoryController');
+});
+
 
 // 登入頁GET Request
-Route::get('login', 'LoginController@showLoginForm');
+Route::get('login', ['as' => 'login', 'uses' => 'LoginController@showLoginForm']);
 
 // 登入認證
 Route::post('login', 'LoginController@authenticate');
