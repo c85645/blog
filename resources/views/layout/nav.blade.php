@@ -13,22 +13,33 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      @if (Auth::guest())
+      @else
       <ul class="nav navbar-nav">
         <li><a href="/task">工作管理 <span class="sr-only">(current)</span></a></li>
         <li><a href="/article">文章管理</a></li>
         <li><a href="/category">分類管理</a></li>
       </ul>
+      @endif
       <ul class="nav navbar-nav navbar-right">
+        @if (Auth::guest())
+        <li><a href="{{ url('/login') }}">Login</a></li>
+        <li><a href="{{ url('/register') }}">Register</a></li>
+        @else
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-circle" src="https://avatars0.githubusercontent.com/u/16713415?v=4&s=460" style="height: 20px"> {{ Auth::user()->name }} <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-circle" src="https://avatars0.githubusercontent.com/u/16713415?v=4&s=460" style="height: 20px"> {{ Auth:: user()->name }} <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">第一個選單</a></li>
             <li><a href="#">第二個選單</a></li>
             <li><a href="#">第三個選單</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">分隔連結</a></li>
+            <li>
+              <a href="#" onclick="$('#logout-form').submit();"> 登出 </a>
+              <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;"> {{ csrf_field() }}</form>
+            </li>
           </ul>
         </li>
+        @endif
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

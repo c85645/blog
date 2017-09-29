@@ -32,4 +32,4 @@ Route::get('login', 'LoginController@showLoginForm');
 Route::post('login', 'LoginController@authenticate');
 
 // 登出
-Route::post('login'. 'LoginController@logout');
+Route::post('logout', 'LoginController@logout');
