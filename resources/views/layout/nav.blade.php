@@ -29,13 +29,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-circle" src="https://avatars0.githubusercontent.com/u/16713415?v=4&s=460" style="height: 20px"> {{ Auth:: user()->name }} <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">第一個選單</a></li>
-            <li><a href="#">第二個選單</a></li>
-            <li><a href="#">第三個選單</a></li>
-            <li role="separator" class="divider"></li>
             <li>
-              <a href="#" onclick="$('#logout-form').submit();"> 登出 </a>
-              <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;"> {{ csrf_field() }}</form>
+              <a href="{{ url('/logout') }}"> 登出 </a>
             </li>
           </ul>
         </li>
