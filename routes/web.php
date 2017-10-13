@@ -36,3 +36,9 @@ Route::post('login', 'LoginController@authenticate');
 
 // 登出
 Route::get('logout', 'LoginController@logout');
+
+// 註冊頁面
+Route::get('register', 'LoginController@showRegistrationForm');
+
+// 註冊
+Route::post('register', 'LoginController@createUser');

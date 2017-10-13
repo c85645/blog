@@ -13,12 +13,17 @@
     <div class="spacer"></div>
     <div class="row">
       <div class="col-xs-offset-4 col-xs-4">
-        <form class="jumbotron" method="post" action="/login">
+        <form class="jumbotron" method="post" action="/register">
           <div class="text-center">
-            <img src="https://avatars2.githubusercontent.com/u/28626891?s=200&v=4">
+            <div class="page-header">新會員註冊</div>
           </div>
 
           {{ csrf_field() }}
+          <div class="form-group">
+            <h3>UserName:</h3>
+            <input type="text" name="name" class="form-control">
+          </div>
+
           <div class="form-group">
             <h3>Email:</h3>
             <input type="text" name="email" class="form-control">
@@ -30,12 +35,9 @@
           </div>
 
           <div class="form-group text-center">
-            <input type="submit" class="btn btn-primary" value="登入">
+            <input type="submit" class="btn btn-primary" value="註冊">
           </div>
 
-          <div class="text-center">
-            沒有帳號？<a href="{{ url('/register') }}">點我註冊</a>
-          </div>
           @include('layout.errors')
         </form>
       </div>
